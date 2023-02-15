@@ -9,9 +9,4 @@ public class FactorialNumbers {
             multiplier++;
         }
     }
-
-    public static void main(String[] args) {
-        FactorialNumbers test = new FactorialNumbers();
-        test.printFactorialRow(1000);
-    }
 }
