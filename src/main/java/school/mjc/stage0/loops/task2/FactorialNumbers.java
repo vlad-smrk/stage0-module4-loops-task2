@@ -2,17 +2,16 @@ package school.mjc.stage0.loops.task2;
 
 public class FactorialNumbers {
     public void printFactorialRow(int printToInclusive) {
-        if (printToInclusive == 0) {
-            System.out.println("0");
-            return;
+        int factorial = 1, multiplier = 1;
+        while (factorial <= printToInclusive) {
+            System.out.println(factorial);
+            factorial *= multiplier;
+            multiplier++;
         }
+    }
 
-        int previous = 0, number = 1;
-        while (number <= printToInclusive) {
-            System.out.println(number);
-            int temp = number;
-            number += previous;
-            previous = temp;
-        }
+    public static void main(String[] args) {
+        FactorialNumbers test = new FactorialNumbers();
+        test.printFactorialRow(1000);
     }
 }
